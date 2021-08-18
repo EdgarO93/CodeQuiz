@@ -32,7 +32,7 @@ h1 {
   font-size: 18px;
 }
 
-.start p {
+.startButton p {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
