@@ -1,8 +1,10 @@
 //define variables
-var timer= document.querySelector(".timer");
+var timerElement= document.querySelector(".timer");
 var  intro= document.querySelector (".intro");
 var startBtnEL= document.querySelector ("#start-btn");
 
+var timerCount;
+var timer;
 var rightCounter= 0;
 var wrongCounter = 0;
 // using an array for questions
@@ -28,6 +30,28 @@ var questions = [
 
 //function for timer
 //need to subtract time for a wrong question, minus 10? 
+function startTimer() {
+    // Sets timer
+    timer = setInterval(function() {
+      timerCount--;
+      timerElement.textContent = timerCount;
+      if (rightCounter = 5 || timerCount >= 0) {
+        // Tests if win condition is met
+        if (isWin && timerCount > 0) {
+          // Clears interval and stops timer
+          clearInterval(timer);
+          winGame();
+        }
+      }
+      // Tests if time has run out
+      if (timerCount === 0) {
+        // Clears interval
+        clearInterval(timer);
+        loseGame();
+      }
+    }, 1000);
+  }
+  
 
 //function for highscore
 //prob do a one 100 point for right
@@ -65,6 +89,8 @@ $(startBtnEL).on("click", function(){
  displayQuestion(questions[0])
  $("#start-btn").hide();
  $(".intro").hide();
+ timerCount= 10;
+ startTimer()
 });
 
 
