@@ -1,8 +1,9 @@
+
 //define variables
 var timerElement= document.querySelector(".timer");
 var  intro= document.querySelector (".intro");
 var startBtnEL= document.querySelector ("#start-btn");
-
+var questionCount= 0;
 var timerCount;
 var timer;
 var rightCounter= 0;
@@ -26,9 +27,10 @@ var questions = [
     "solution": "right"
 }
 
+
 ]
 
-//function for timer
+//function for timer, 
 //need to subtract time for a wrong question, minus 10? 
 function startTimer() {
     // Sets timer
@@ -37,17 +39,18 @@ function startTimer() {
       timerElement.textContent = timerCount;
       if (rightCounter = 5 || timerCount >= 0) {
         // Tests if win condition is met
-        if (isWin && timerCount > 0) {
+        if ( timerCount > 0) {
           // Clears interval and stops timer
-          clearInterval(timer);
-          winGame();
+        //   clearInterval(timer);
+        //   winGame();
         }
       }
       // Tests if time has run out
-      if (timerCount === 0) {
+      if (timerCount  <=0) {
         // Clears interval
+        timerCount= 0;
         clearInterval(timer);
-        loseGame();
+        // loseGame(); need to call end game function
       }
     }, 1000);
   }
@@ -74,8 +77,26 @@ function displayQuestion(questions) {
 }
 
 $(document).on("click",".questions-option", function() {
-        alert("test")
+
+    //IF clicked correct , alert user then move to next question [i+]
+    if(this.value=== 'right' ){
+    console.log(this.value)
+    alert('right answer')
+    questionCount++
+    displayQuestion(questions[questionCount])
+    } else{
+        console.log(this.value)
+        alert('wrong answer, minus 10 seconds')
+        timerCount= timerCount -10;
+        console.log(timerCount)
+    }
+    //else if clicked incorrect, alert user and subtract 10 seconds and move to next question
+
+
+
 });
+
+
 //potentially could add a class for the right answer? then adding it up there
 // displayQuestion(questions[0]);
 //game function will have timer 
@@ -86,10 +107,10 @@ $(document).on("click",".questions-option", function() {
 
 //button for start , intro text and start button will disappear need to find way to cycle questions.
 $(startBtnEL).on("click", function(){
- displayQuestion(questions[0])
+ displayQuestion(questions[questionCount])
  $("#start-btn").hide();
  $(".intro").hide();
- timerCount= 10;
+ timerCount= 100;
  startTimer()
 });
 
