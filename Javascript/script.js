@@ -117,6 +117,10 @@ $(document).on("click", ".questions-option", function () {
         alert('wrong answer, minus 10 seconds')
         timerCount = timerCount - 10;
         console.log(timerCount)
+        $(".questionSec").children().hide();
+        $(".questions-option").hide();
+        questionCount++
+        displayQuestion(questions[questionCount])
     }
     //else if clicked incorrect, alert user and subtract 10 seconds and move to next question
 
