@@ -24,7 +24,7 @@ var highScores = [];
 var questions = [
     {
         "text": "How do you insert COMMENTS in Javascript code?",
-        "options": ["/* This is a comment", "# This is a coment", "// This is a comment", "$$ This is a comment"],
+        "options": ["/* This is a comment", "# This is a comment", "// This is a comment", "$$ This is a comment"],
         "solution": "// This is a comment"
     },
     {
@@ -60,6 +60,8 @@ var questions = [
 function winGame() {
     $(QscoreEL).show();
     userScoreEl.textContent = score;
+    $(".questionSec").children().hide();
+    $(".questions-option").hide();
 
 }
 
@@ -71,9 +73,6 @@ function endGame() {
     $(".questions-option").hide();
     $(QscoreEL).show();
     userScoreEl.textContent = score;
-    // resetQuiz();
-    // // location.reload()
-    // showHS();
 
 
 }
@@ -84,6 +83,7 @@ function checkQuiz() {
         score = score + timerCount;
         $(".questionSec").children().hide();
         $(".questions-option").hide();
+        questionCount = 0;
     }
 }
 
@@ -191,6 +191,7 @@ function resetQuiz() {
     timerElement.textContent = timerCount;
     isOver = false;
 }
+
 
 
 
