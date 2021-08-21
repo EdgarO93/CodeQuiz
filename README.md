@@ -7,7 +7,7 @@ This CodeQuiz was created using Javascript and JQuery. I wanted to create a quiz
 
 
 ## Screenshot
-![plot](Images/PasswordGeneratorScreenshot.png)
+![plot](Assets/images/edgaro93.github.io_CodeQuiz_.png)
 
 
 ## Acknowlegments
