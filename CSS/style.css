@@ -72,3 +72,22 @@ h1 {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 18px;
 }
+
+.scoreResults{
+    display: none;
+}
+
+.highscoreSection{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+   align-items: center
+}
+
+.headerHS{
+    display: none;
+}
+
+.highscoreSection button {
+    display: none;
+}
