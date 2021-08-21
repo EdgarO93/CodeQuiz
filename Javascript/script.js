@@ -140,7 +140,7 @@ $(startBtnEL).on("click", function () {
     displayQuestion(questions[questionCount])
     $("#start-btn").hide();
     $(".intro").hide();
-    timerCount = 100;
+    timerCount = 60;
     startTimer()
 });
 
