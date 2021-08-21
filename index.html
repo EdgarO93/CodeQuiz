@@ -12,11 +12,11 @@
   <body>
     <header>
       <section class="highscores">
-        <p>View Highscores</p>
+        <a href="#hs" class="linkHS"> View Highscores</a>
       </section>
 
       <section class="timer">
-        <p>Time: 60</p>
+        <p>Time: <span id="time">50</span></p>
       </section>
     </header>
 
@@ -25,23 +25,47 @@
         <h1>Coding Quiz Challenge</h1>
         <p>
           Try to answer the following Javascript related questions within the
-          time limit. <br/>
+          time limit. <br />
           Keep in mind that incorrect answers will penalize your score time by
           ten seconds!
         </p>
       </section>
 
-      <section class= "startButtonSec">
+      <section class="startButtonSec">
         <button id="start-btn" class="styleStartbtn">Start</button>
       </section>
 
-<section class="questionSec">
+      <section class="questionSec"></section>
 
-</section>
+      <section class="scoreResults">
+        <div class="finScore">
+          <p class="inScore">Your final score: <span id="score"></span></p>
+          <p class="enterIn">
+            Enter initials:
+            <input type="text" placeholder="EO" id="initials" />
+          </p>
+          <button
+            type="button"
+            class="btn btn-primary btn-mdn"
+            id="submitInitials">
+            Submit
+          </button>
+        </div>
+      </section>
+
+      <section class="highscoreSection">
+        <section id="hs">
+          <h1 class="headerHS"> Last Highscores</h1>
+          <div id="scoreslist"></div>
+          <button type="button" class="btn btn-primary btn-mdn" id="goBack">
+            Go Back
+          </button>
+        </section>
+      </section>
     </main>
   </body>
- <!-- Added link to the jQuery library -->
- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- Added link to the jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
   <script src="Javascript/script.js"></script>
 </html>
