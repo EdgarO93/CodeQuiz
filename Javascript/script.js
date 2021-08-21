@@ -19,7 +19,6 @@ var timer;
 var rightCounter = 0;
 var score = 0;
 var isOver = false;
-var validat;
 var highScores = [];
 // using an array for questions
 var questions = [
@@ -115,7 +114,7 @@ function startTimer() {
 }
 
 
-// //function for showing the highscore
+// //function for showing the highscore list
 function showHS() {
     // clears out section
     scoreList.innerHTML = "";
@@ -124,6 +123,7 @@ function showHS() {
     for (let i = 0; i < highScores.length; i++) {
         var scoreItem = document.createElement("div");
         console.log(scoreItem)
+        highScores.sort((a, b) => parseFloat(b.userScore) - parseFloat(a.userScore));
         scoreItem.textContent = `${(i + 1)}. ${highScores[i].userID} - ${highScores[i].userScore}`;
         scoreList.appendChild(scoreItem);
         $(headerHS).show();
