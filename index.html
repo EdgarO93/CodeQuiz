@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edgar's Code Quiz</title>
+    <!-- links to the css for resetting, the css for the normalizing javascript and the css for styling the htlm elements -->
     <link rel="stylesheet" href="CSS/reset.css" />
     <link rel="stylesheet" href="CSS/jass.css" />
     <link rel="stylesheet" href="CSS/style.css" />
@@ -11,53 +12,67 @@
 
   <body>
     <header>
+      <!-- this section has a link for the Highscores list -->
       <section class="highscores">
         <a href="#hs" class="linkHS"> View Highscores</a>
       </section>
-
+      <!-- this section sets the timer and will be changed by the javascript -->
       <section class="timer">
         <p>Time: <span id="time">50</span></p>
       </section>
     </header>
 
     <main>
+      <!-- this section serves as the landing page section -->
       <section class="intro">
         <h1>Coding Quiz Challenge</h1>
         <p>
           Try to answer the following Javascript related questions within the
           time limit. <br />
           Keep in mind that incorrect answers will penalize your score time by
-          ten seconds! 
+          ten seconds!
         </p>
       </section>
-
+      <!-- this section has the start button that will start the quiz when clicked -->
       <section class="startButtonSec">
         <button id="start-btn" class="styleStartbtn">Start</button>
       </section>
-
+      <!-- this empty section is populated by the quiz -->
       <section class="questionSec"></section>
-
+      <!-- this section has the score results when quiz over -->
       <section class="scoreResults">
-        <div class="finScore">
-          <p class="inScore">Your final score: <span id="score"></span></p>
-          <p class="enterIn">
+        <!-- added class in div for possible CSS changes but decided not to -->
+        <div>
+          <!-- added class in p tag for possible CSS changes but decided not to  -->
+          <p>Your final score: <span id="score"></span></p>
+          <!-- above score will be added over the score id -->
+          <p>
             Enter initials:
             <input type="text" placeholder="EO" id="initials" />
+            <!-- this creates the form for the initials with placeholder text  -->
           </p>
+          <!-- this is the button for submit -->
           <button
             type="button"
             class="btn btn-primary btn-mdn"
-            id="submitInitials">
+            id="submitInitials"
+          >
             Submit
           </button>
         </div>
       </section>
-
+      <!-- this section is for the Highscore list -->
       <section class="highscoreSection">
         <section id="hs">
-          <h1 class="headerHS"> Highscores</h1>
-          <p>  <br/> (Viewing Highscores while taking the quiz and then clicking Go Back will reset the page!)</p>
+          <h1 class="headerHS">Highscores</h1>
+          <!-- added this warning text -->
+          <p>
+            <br />
+            (Viewing Highscores while taking the quiz and then clicking Go Back
+            will reset the page!)
+          </p>
           <div id="scoreslist"></div>
+          <!-- makes go back button -->
           <button type="button" class="btn btn-primary btn-mdn" id="goBack">
             Go Back
           </button>
@@ -67,6 +82,6 @@
   </body>
   <!-- Added link to the jQuery library -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
+  <!-- Link for Javascript file -->
   <script src="Javascript/script.js"></script>
 </html>
