@@ -1,39 +1,31 @@
+/* sets fonts for all elements */
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+/* sets up the view highscores and timer elements */
 header {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
-
+/* sets up the quiz title position and font size/weight */
 h1 {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   font-weight: bolder;
   font-size: 36px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
+/* changes timer color */
 .timer {
   color: firebrick;
 }
-.timer p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-.highscores p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: firebrick;
-}
-
+/* pushes down the intro page text section */
 .intro {
   padding-top: 80px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
+/* affects the text under the title, centering it and font size */
 .intro p {
   display: flex;
   flex-wrap: nowrap;
@@ -41,53 +33,49 @@ h1 {
   padding-top: 0.5%;
   font-size: 18px;
 }
-
+/* moves the button section to the center */
 .startButtonSec {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
 }
+/* adjusts what the button text looks like  */
 .styleStartbtn {
   margin-top: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 20px;
   font-weight: 750;
 }
+/* shows the questions as a list and adjusts the spacing and font weight*/
 .questionSec {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: space-around;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin-top: 1rem;
   font-size: 20px;
   font-weight: 700;
 }
-
+/* adjusts font size of question options and their spacing  */
 .questions-option {
   margin: 0.15rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 18px;
 }
-
-.scoreResults{
-    display: none;
+/* hides the score results by default */
+.scoreResults {
+  display: none;
 }
-
-.highscoreSection{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-   align-items: center
+/* centers the highscores list */
+.highscoreSection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
 }
-
-.headerHS{
-    display: none;
+/* hides the header highscores by default */
+.headerHS {
+  display: none;
 }
-
+/* hides the highscores button by default */
 .highscoreSection button {
-    display: none;
+  display: none;
 }
