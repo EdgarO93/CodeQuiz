@@ -211,8 +211,8 @@ function resetQuiz() {
 $(startBtnEL).on("click", function () {
     isOver = false;
     displayQuestion(questions[questionCount])
-    $("#start-btn").hide();
-    $(".intro").hide();
+    $(startBtnEL).hide();
+    $(intro).hide();
     timerCount = 50;
     startTimer()
 });
@@ -247,18 +247,19 @@ $(submitInitialsBtn).on("click", function () {
 //returns to intro page and will reload the page
 $(backBtn).on("click", function () {
     $(viewScoresEL).hide();
-    $("#start-btn").show();
-    $(".intro").show();
+    $(startBtnEL).show();
+    $(intro).show();
     //added this to clear the page in case it was accessed while taking quiz
     location.reload();
 });
 
 //goes to highscore list, hides the intro and start page
 $(viewHsEL).on("click", function () {
-    $(".intro").hide();
-    $("#start-btn").hide();
+    $(intro).hide();
+    $(startBtnEL).hide();
+    //added back button so there is a back button in case view scores is clicked when section empty
+    $(backBtn).show();
     //invokes the start quiz and also resets conditions after
     showHS();
     resetQuiz();
-
 });
