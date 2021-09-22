@@ -9,8 +9,13 @@ This CodeQuiz was created using Javascript and JQuery. I wanted to create a quiz
 ## Screenshot
 ![plot](Assets/images/edgaro93.github.io_CodeQuiz_.png)
 
+![plot](Assets/images/pic.png)
+
 ## License
 This project is licensed under the terms of the MIT license.
+
+## Contact Info
+You can contact me at edort93@gmail.com
 
 ## Acknowlegments
 ~~~
